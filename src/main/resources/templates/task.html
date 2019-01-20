@@ -3,18 +3,32 @@
 <head lang="en">
     <meta charset="UTF-8" />
     <title>Task</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="i18nTask.js"></script>
 </head>
 <body>
+
+<h2 style="font-size: 60px" for="h2title" th:text="#{h2title}"></h2>
+
 <div>
-    <label for="field1" th:text="#{field1}"></label>
-    <input type="text" id="field1" name="field1" />
+    <label for="projectName" th:text="#{projectName}"></label>
+    <input type="text" id="projectName" name="projectName" />
 </div>
 <div>
-    <label for="field2" th:text="#{field2}"></label>
-    <input type="text" id="field2" name="field2" />
+    <label for="projecOwner" th:text="#{projecOwner}"></label>
+    <input type="text" id="projecOwner" name="projecOwner" />
 </div>
 <div>
-    <button type="submit">Save</button>
+    <button for="saveField" th:text="#{saveField}" type="submit"></button>
 </div>
+<br /> <br />
+<span th:text="#{lang.change}"></span>:
+<select id="locales">
+    <option value=""></option>
+    <option value="en" th:text="#{lang.en}"></option>
+    <option value="es" th:text="#{lang.es}"></option>
+    <option value="pt" th:text="#{lang.pt}"></option>
+</select>
+
 </body>
 </html>
