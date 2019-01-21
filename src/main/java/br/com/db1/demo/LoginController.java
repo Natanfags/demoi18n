@@ -27,9 +27,10 @@ public class LoginController {
 
     @PostMapping("loginform")
     public String processLogin(LoginForm form) {
-        String defaultMessage = messageSource.getMessage("email.notempty", null, Locale.getDefault());
+        Locale ptBR = new Locale("pt", "BR");
+        Locale es_ES = new Locale("es", "ES");
+
+        String defaultMessage = messageSource.getMessage("email.notempty", null, es_ES);
         return defaultMessage;
     }
-
-    final Locale myLocale = new Locale("pt", "BR");
 }
