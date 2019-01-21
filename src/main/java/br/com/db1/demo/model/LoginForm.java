@@ -10,7 +10,7 @@ public class LoginForm {
     @Email
     private String email;
 
-    @NotNull
+    @NotNull(message = "{not.null}")
     private String password;
 
     public String getEmail() {

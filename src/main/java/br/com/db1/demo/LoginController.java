@@ -10,22 +10,26 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import java.util.Locale;
 
+import static java.util.Locale.US;
+
 @RestController
 @RequestMapping("/")
 public class LoginController {
 
-    @PostMapping("loginform")
+    /*@PostMapping("loginform")
     public String processLogin(@Valid LoginForm form) {
         return "Success";
 
-    }
+    }*/
 
- /*   @Autowired
+    @Autowired
     private MessageSource messageSource;
 
     @PostMapping("loginform")
     public String processLogin(LoginForm form) {
-        String message = messageSource.getMessage("email.notempty", null, Locale.US);
-        return "Success";
-    }*/
+        String defaultMessage = messageSource.getMessage("email.notempty", null, Locale.getDefault());
+        return defaultMessage;
+    }
+
+    final Locale myLocale = new Locale("pt", "BR");
 }
