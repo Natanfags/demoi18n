@@ -10,14 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Locale;
 
 @RestController
-@RequestMapping("api/message")
+@RequestMapping("api/")
 public class MessageController {
 
-    public static final String MESSAGE_RECEIVED = "message.received";
-    public static final String MESSAGE_HELLO_WORLD = "message.hello.world";
     @Autowired
     private MessageSource messageSource;
-    private String message;
 
     @GetMapping("pt-BR")
     public String getPortuguese (){
@@ -36,7 +33,9 @@ public class MessageController {
        Locale locale = new Locale("es", "ES");
        return messageSource.getMessage(MESSAGE_HELLO_WORLD, null, locale);
     }
+
 //-------------------------------message--------------------------------------------------
+
     @GetMapping("pt-BR/message")
     public String getPortugueseMessage(@RequestParam("message")String message) {
         Locale locale = new Locale("pt", "BR");
@@ -57,5 +56,8 @@ public class MessageController {
         message = messageSource.getMessage(MESSAGE_RECEIVED, new String[] {message}, locale);
         return message;
     }
+
+    public static final String MESSAGE_RECEIVED = "message.received";
+    public static final String MESSAGE_HELLO_WORLD = "message.hello.world";
 }
 
