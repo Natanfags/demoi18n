@@ -7,7 +7,7 @@ Para saber um pouco mais sobre a nomeclartura i18n e alguns fundamentos.
 - [i18n de mensagens de validações](https://www.baeldung.com/spring-custom-validation-message-source).
 
 ## Sobre a Demo
-*O **_i18n_** permite alterar o idioma baseado em um "Resource Bundle 'messages'"*
+*O **_i18n_** permite alterar o idioma de mensagens do servidor baseado em um "Resource Bundle `messages`" onde astravés da uma implementação de `{chave} "valor"`é identificado a chave alterando para o valor do idioma solicitado.*
 
 ## Executar a Demo na minha máquina
 
@@ -65,7 +65,7 @@ messages_pt.properties
 messages_es.properties
 ```
 
-**4**.Criando suas mensagens no *Resource Bundle* de messages passando uma *chave* e o valor que sera atribuido referente a tradução pro idioma aplicado. Onde a chave sera substituida no sistema pelos valores atribuidos. Exemplo:<br> (IMAGEN DAS MENSAGENS AQUI)
+**4**.Criando suas mensagens no *Resource Bundle* de messages passando uma *chave* e o valor que sera atribuido referente a tradução pro idioma aplicado. Onde a chave sera substituida no sistema pelos valores atribuidos. Exemplo:<br>
 ```properties
 message.hello.world=Olá mundo
 message.received=Mensagen recebida
