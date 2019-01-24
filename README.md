@@ -2,7 +2,7 @@
 
 ## O que é i18n
 **_Internacionalização_** ou **_i18n_**, são processos de desenvolvimento e/ou adaptação de um software, para uma língua e cultura de um país.
-Para saber um pouco mais sobre a nomeclartura i18n e alguns fundamentos.
+Para saber um pouco mais sobre a nomeclartura i18n e alguns fundamentos:
 - https://pt.wikipedia.org/wiki/Internacionaliza%C3%A7%C3%A3o_(inform%C3%A1tica)
 - [i18n de mensagens de validações](https://www.baeldung.com/spring-custom-validation-message-source).
 
