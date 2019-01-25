@@ -33,4 +33,3 @@ public class MessageController {
         return messageSource.getMessage(MESSAGE_HELLO_WORLD, null, locale);
     }
 }
-
