@@ -73,7 +73,8 @@ _1_. Criar um projeto [Spring Boot](https://start.spring.io/) e adicionar as dep
   <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
-_2_. Implementar o _`MessageSource`_ como um _`Bean`_ para delegação das mensagens, configurando um _`classpath:"endereço do Resource Bundle"`_ e configurando também o tipo de _encoding_ que será utilizado.
+_2_. Implementar a _classe_ _`CustomMessageSourceConfiguration`_ e configuas dois _`@Bean`_, um para tratar as mensagens(_MessageSource_) e outro para validação da _classe_ _`Person`_ que ser implementado na etapa _4_:<br>
+- O _`MessageSource`_ cdelegará as mensagens, configurando um _`classpath:"endereço do Resource Bundle"`_ e configurando também o tipo de _encoding_ que será utilizado.
 
 ```java
  @Bean
@@ -84,6 +85,17 @@ _2_. Implementar o _`MessageSource`_ como um _`Bean`_ para delegação das mensa
         return messageSource;
     }
 ```  
+- O _`LocalValidatorFactoryBean`_ validará as os campos na _classe_ _`Person`_ retornando mensagem de _`@NotNull`_ e _`@NotEmpty`_ sera tatado pelo _`MessageSource`_ e retornará o _valor_ correspondente a configuração do nosso _"dicionario"_.
+```java
+ @Bean
+    public LocalValidatorFactoryBean getValidator() {
+        LocalValidatorFactoryBean bean = new LocalValidatorFactoryBean();
+        bean.setValidationMessageSource(messageSource());
+        return bean;
+    }
+```
+
+
 _3_. Configurar um _`Resource Bundle`_ com nome _`messages`_ seguindo por _`"abreviação do idioma"`_ podendo criar quantos _"dicionários"_ forem necessários para variados idiomas. Exemplo:<br> 
 
 ```properties
@@ -92,7 +104,7 @@ messages_pt.properties
 messages_es.properties
 ```
 
-_4_. Criar um _`domain`_ para testar o método _`POST`_ de traduzir mensagens. Exemplo uma _classe_ Person que valide e-mail e senha e retorne uma mensagem informando que o campo não pode ser vazio. Exemplo a baixo:
+_4_. Criar um _`domain`_ para testar o método _`POST`_ de traduzir mensagens. Exemplo uma _classe_ _`Person`_ que valide e-mail e senha e retorne uma mensagem informando que o campo não pode ser vazio. Exemplo a baixo:
 
 ```java
 public class Person {
