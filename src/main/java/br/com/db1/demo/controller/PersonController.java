@@ -18,16 +18,7 @@ public class PersonController {
 
     @PostMapping("validperson")
     public String post(@Valid Person person) {
-
         return "Success";
     }
 }
-//@RestController
-//@RequestMapping("/")
-//public class LoginController {
-//
-//    @PostMapping("loginform")
-//    public String processLogin(@Valid LoginForm form) {
-//        return "Success";
-//
-//    }
+
