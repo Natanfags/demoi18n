@@ -18,7 +18,7 @@ Para saber um pouco mais sobre a nomeclartura i18n e alguns fundamentos:
 ### Executando:
 **1**.Clonar o projeto e importar na sua IDE como `Maven Project`<br>
 
-**2**.![Executar a aplicação pelo `Tomcat` dando run da `DemoApplication`](/images/tomcatRunning.png)<br>
+**2**.![Executar a aplicação pelo `Tomcat` dando run da `DemoApplication`](https://github.com/Natanfags/demo/blob/master/images/tomcatRunning.PNG)<br>
 
 **3**.Enviar uma requisição `GET` no Postman com a URL do idioma que quiser testar. Este é uma método de teste simples, onde foi criado uma frase de teste e adicionado suas respectivas traduções no *Resource Bundle* da Demo.
 Exemplo: <br>
@@ -31,7 +31,7 @@ Exemplo: <br>
 - para Ingles http://localhost:8080/api/en-US/message?teste <br>
 - para Português http://localhost:8080/api/pt-BR/message?teste <br>
 
-![O servidor retornara uma mensagem traduzida "`Mensagem recebida`" interpolando com uma mensagem que o servidor ira passar.](/images/postmanResultEx.png)
+![O servidor retornara uma mensagem traduzida "`Mensagem recebida`" interpolando com uma mensagem que o servidor ira passar.](https://github.com/Natanfags/demo/blob/master/images/postmanResultEx.PNG)
 
 ### Passo a passo de desenvolvimento:
 **1**.Criar um projeto [Spring Boot](https://start.spring.io/) e adicionar as dependências:
