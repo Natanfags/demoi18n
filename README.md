@@ -27,9 +27,9 @@ Exemplo: <br>
 - para Português http://localhost:8080/api/messages/pt-BR <br>
 - para Espanhol http://localhost:8080/api/messages/es-ES <br>
 
-![]().
-![]().
-![]().
+![](https://github.com/Natanfags/demo/blob/master/images/postmanHwUS.PNG).
+![](https://github.com/Natanfags/demo/blob/master/images/postmanHwBR.PNG).
+![](https://github.com/Natanfags/demo/blob/master/images/postmanHwES.PNG).
 
 _4_. Para testar mensagens que serão enviados do sistema + mensagem passada pelo servidor via URL, utilize o seguinte método. Exemplo:<br>
 
@@ -37,9 +37,9 @@ _4_. Para testar mensagens que serão enviados do sistema + mensagem passada pel
 - para Português http://localhost:8080/api/messages/args/pt-BR?args=teste <br>
 - para Espanhol http://localhost:8080/api/messages/args/es-ES?args=teste <br>
 
-![]().
-![]().
-![]().
+![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsUS.PNG).
+![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsBR.PNG).
+![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsES.PNG).
 
 ### Testando a internacionalização de mensagens do sistema:
 
@@ -57,8 +57,8 @@ public class DemoApplication {
 ```
 _2_. Enviar uma requisição _`POST`_ no _Postman_ com a extensão da URL chamada _`validperson`_, o _postman_ retornara a mensagem de erro de validação com as mensagens configuradas traduzidas, baseado no seu idioma configurado, como nas imagens a baixo.
 
-![en-US]().<br>
-![pt-BR]().
+![en-US](https://github.com/Natanfags/demo/blob/master/images/postmanValidPersonUS.PNG).<br>
+![pt-BR](https://github.com/Natanfags/demo/blob/master/images/postmanValidPersonBR.PNG).
 
 ## Passo a passo de desenvolvimento:
 _1_. Criar um projeto [Spring Boot](https://start.spring.io/) e adicionar as dependências:
