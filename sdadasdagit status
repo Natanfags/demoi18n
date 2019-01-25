@@ -1,0 +1,90 @@
+[33mcommit fc986a9faac2e70a0edbd19d8d34920632a95c2e[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Thu Jan 24 17:06:48 2019 -0200
+
+    separada para messages + String para classse propria
+
+[33mcommit 428ee7bb105a3d82f13126170e6456fd5ea031bd[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Thu Jan 24 17:02:50 2019 -0200
+
+    criado domain person para base de testes messages
+
+[33mcommit 41f45f88eafe639b90db12384c96d9b06de9a5c7[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Thu Jan 24 16:55:31 2019 -0200
+
+    separado em uma classe propria e alterado URL
+
+[33mcommit 71592b5a6fd66dc3bfefbfe6d47b20ee61be12db[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Thu Jan 24 12:39:43 2019 -0200
+
+    criado pasta de imagens para o README.MD
+
+[33mcommit 3ababb8d4fcead8348b780a42621c3f1243b58a7[m
+Merge: ebce7e3 b95297a
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Thu Jan 24 08:07:19 2019 -0200
+
+    Merge branch 'master' of https://github.com/Natanfags/demo
+
+[33mcommit b95297a1b4a0bf280ac89632e5b15638cdcd2740[m
+Author: Natan Fagundes <44206728+Natanfags@users.noreply.github.com>
+Date:   Wed Jan 23 18:14:40 2019 -0200
+
+    Create README.md
+
+[33mcommit ebce7e3e934b5d3c9ec2a9e266ee023ca3800796[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Wed Jan 23 16:56:28 2019 -0200
+
+    corrigido encoding
+
+[33mcommit e61cb8b6d6874850a58d763e6f9a4a3848bfee7c[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Wed Jan 23 15:58:21 2019 -0200
+
+    refeito demo de modo diferente, funcionando
+
+[33mcommit 82d8610423a281f0d7f5e1f8b2b16472c50772d8[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Tue Jan 22 11:15:13 2019 -0200
+
+    criado repositorio i18n para traducoes
+
+[33mcommit 01528d6e5029f43d43afd0e2138fd38486cf975d[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Mon Jan 21 17:38:15 2019 -0200
+
+    implementado Locale.es e locale.ptbr
+
+[33mcommit 65978bfff75ae6bf0720fb1bba98b83b01366f5d[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Mon Jan 21 16:53:47 2019 -0200
+
+    add Locale.setDefault
+
+[33mcommit 4f0b67824fda9af1e89f2a6c6b93dde3a40022f8[m
+Author: Natanfags <natan.fags@gmail.com>
+Date:   Mon Jan 21 15:43:29 2019 -0200
+
+    alterado projeto, messages ok
+
+[33mcommit 8df651b4a0b312af0c7b6538fcf2c86c4d113d93[m
+Author: Natan Fagundes <natan.fags@gmail.com>
+Date:   Sun Jan 20 12:10:48 2019 -0200
+
+    implementado troca de idioma por seleção
+
+[33mcommit 7ff817e78e3411540b057c6ad62e58058ca97f16[m
+Author: Natan Fagundes <natan.fags@gmail.com>
+Date:   Sun Jan 20 11:20:00 2019 -0200
+
+    Corrigido classe depreciada para uma valida
+
+[33mcommit 30b0c964d137365a6314ea83f9fbd3a61352116d[m
+Author: Natan Fagundes <natan.fags@gmail.com>
+Date:   Sun Jan 20 10:31:05 2019 -0200
+
+    projeto criado

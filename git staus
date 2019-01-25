@@ -1,0 +1,69 @@
+[1mdiff --git a/src/main/java/br/com/db1/demo/controller/MessageController.java b/src/main/java/br/com/db1/demo/controller/MessageController.java[m
+[1mindex f86fd05..e3a4bec 100644[m
+[1m--- a/src/main/java/br/com/db1/demo/controller/MessageController.java[m
+[1m+++ b/src/main/java/br/com/db1/demo/controller/MessageController.java[m
+[36m@@ -2,22 +2,21 @@[m [mpackage br.com.db1.demo.controller;[m
+ [m
+ import org.springframework.beans.factory.annotation.Autowired;[m
+ import org.springframework.context.MessageSource;[m
+[31m-import org.springframework.web.bind.annotation.GetMapping;[m
+[31m-import org.springframework.web.bind.annotation.RequestMapping;[m
+[31m-import org.springframework.web.bind.annotation.RequestParam;[m
+[31m-import org.springframework.web.bind.annotation.RestController;[m
+[32m+[m[32mimport org.springframework.web.bind.annotation.*;[m
+ [m
+ import java.util.Locale;[m
+ [m
+ @RestController[m
+[31m-@RequestMapping("api/")[m
+[32m+[m[32m@RequestMapping("api/messages")[m
+ public class MessageController {[m
+ [m
+[32m+[m[32m    public static final String MESSAGE_HELLO_WORLD = "message.hello.world";[m
+[32m+[m
+     @Autowired[m
+     private MessageSource messageSource;[m
+ [m
+     @GetMapping("pt-BR")[m
+[31m-    public String getPortuguese (){[m
+[32m+[m[32m    public String getPortuguese() {[m
+         Locale locale = new Locale("pt", "BR");[m
+         return messageSource.getMessage(MESSAGE_HELLO_WORLD, null, locale);[m
+     }[m
+[36m@@ -30,34 +29,8 @@[m [mpublic class MessageController {[m
+ [m
+     @GetMapping("es-ES")[m
+     public String getSpanish() {[m
+[31m-       Locale locale = new Locale("es", "ES");[m
+[31m-       return messageSource.getMessage(MESSAGE_HELLO_WORLD, null, locale);[m
+[31m-    }[m
+[31m-[m
+[31m-//-------------------------------message--------------------------------------------------[m
+[31m-[m
+[31m-    @GetMapping("pt-BR/message")[m
+[31m-    public String getPortugueseMessage(@RequestParam("message")String message) {[m
+[31m-        Locale locale = new Locale("pt", "BR");[m
+[31m-        return getMessageLocale(message,new Locale("pt", "BR"));[m
+[31m-    }[m
+[31m-[m
+[31m-    @GetMapping("en-US/message")[m
+[31m-    public String getEnglishMesasge(@RequestParam("message")String message) {[m
+[31m-        return getMessageLocale(message, new Locale("en", "US"));[m
+[31m-    }[m
+[31m-[m
+[31m-    @GetMapping("es-ES/message")[m
+[31m-    public String getSpanishMessage(@RequestParam("message")String message) {[m
+[31m-        return getMessageLocale(message, new Locale("es", "ES"));[m
+[31m-    }[m
+[31m-[m
+[31m-    private String getMessageLocale(String message, Locale locale) {[m
+[31m-        message = messageSource.getMessage(MESSAGE_RECEIVED, new String[] {message}, locale);[m
+[31m-        return message;[m
+[32m+[m[32m        Locale locale = new Locale("es", "ES");[m
+[32m+[m[32m        return messageSource.getMessage(MESSAGE_HELLO_WORLD, null, locale);[m
+     }[m
+[31m-[m
+[31m-    public static final String MESSAGE_RECEIVED = "message.received";[m
+[31m-    public static final String MESSAGE_HELLO_WORLD = "message.hello.world";[m
+ }[m
+ [m
