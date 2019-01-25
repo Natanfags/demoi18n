@@ -6,11 +6,11 @@ import javax.validation.constraints.NotNull;
 
 public class Person {
 
-    @NotEmpty(message = "{name.required}")
+    @NotEmpty(message = "{email.required}")
     @Email
     private String email;
 
-    @NotNull
+    @NotNull(message = "{pw.required}")
     private String password;
 
     public String getEmail() {
