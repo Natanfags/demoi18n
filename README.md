@@ -23,15 +23,21 @@ _2_. ![Executar a aplicação pelo `Tomcat` dando run da `DemoApplication`](http
 _3_. Enviar uma requisição _`GET`_ no _Postman_ com a URL do idioma que quiser testar. Este é uma método de teste simples, onde foi criado uma frase de teste e adicionado suas respectivas traduções no _`Resource Bundle`_ da Demo. 
 Exemplo: <br>
 
-![- para Inglês http://localhost:8080/api/messages/en-US](https://github.com/Natanfags/demo/blob/master/images/postmanHwUS.PNG)
-![- para Português http://localhost:8080/api/messages/pt-BR](https://github.com/Natanfags/demo/blob/master/images/postmanHwBR.PNG)
-![- para Espanhol http://localhost:8080/api/messages/es-ES](https://github.com/Natanfags/demo/blob/master/images/postmanHwES.PNG)
+- para Inglês http://localhost:8080/api/messages/en-US
+![](https://github.com/Natanfags/demo/blob/master/images/postmanHwUS.PNG)<br>
+- para Português http://localhost:8080/api/messages/pt-BR
+![](https://github.com/Natanfags/demo/blob/master/images/postmanHwBR.PNG)<br>
+- para Espanhol http://localhost:8080/api/messages/es-ES
+![](https://github.com/Natanfags/demo/blob/master/images/postmanHwES.PNG)<br>
 
 _4_. Para testar mensagens que serão enviados do sistema + mensagem passada pelo servidor via URL, utilize o seguinte método. Exemplo:<br>
 
-![- para Inglês http://localhost:8080/api/messages/args/en-US?args=teste](https://github.com/Natanfags/demo/blob/master/images/postmanArgsUS.PNG).
-![- para Português http://localhost:8080/api/messages/args/pt-BR?args=teste](https://github.com/Natanfags/demo/blob/master/images/postmanArgsBR.PNG).
-![- para Espanhol http://localhost:8080/api/messages/args/es-ES?args=teste](https://github.com/Natanfags/demo/blob/master/images/postmanArgsES.PNG).
+- para Inglês http://localhost:8080/api/messages/args/en-US?args=teste
+![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsUS.PNG)<br>
+- para Português http://localhost:8080/api/messages/args/pt-BR?args=teste
+![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsBR.PNG)<br>
+- para Espanhol http://localhost:8080/api/messages/args/es-ES?args=teste
+![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsES.PNG)<br>
 
 ### Testando a internacionalização de mensagens do sistema:
 
