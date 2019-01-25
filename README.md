@@ -23,23 +23,15 @@ _2_. ![Executar a aplicação pelo `Tomcat` dando run da `DemoApplication`](http
 _3_. Enviar uma requisição _`GET`_ no _Postman_ com a URL do idioma que quiser testar. Este é uma método de teste simples, onde foi criado uma frase de teste e adicionado suas respectivas traduções no _`Resource Bundle`_ da Demo. 
 Exemplo: <br>
 
-- para Inglês http://localhost:8080/api/messages/en-US <br>
-- para Português http://localhost:8080/api/messages/pt-BR <br>
-- para Espanhol http://localhost:8080/api/messages/es-ES <br>
-
-![](https://github.com/Natanfags/demo/blob/master/images/postmanHwUS.PNG).
-![](https://github.com/Natanfags/demo/blob/master/images/postmanHwBR.PNG).
-![](https://github.com/Natanfags/demo/blob/master/images/postmanHwES.PNG).
+![- para Inglês http://localhost:8080/api/messages/en-US](https://github.com/Natanfags/demo/blob/master/images/postmanHwUS.PNG)
+![- para Português http://localhost:8080/api/messages/pt-BR](https://github.com/Natanfags/demo/blob/master/images/postmanHwBR.PNG)
+![- para Espanhol http://localhost:8080/api/messages/es-ES](https://github.com/Natanfags/demo/blob/master/images/postmanHwES.PNG)
 
 _4_. Para testar mensagens que serão enviados do sistema + mensagem passada pelo servidor via URL, utilize o seguinte método. Exemplo:<br>
 
-- para Inglês http://localhost:8080/api/messages/args/en-US?args=teste <br>
-- para Português http://localhost:8080/api/messages/args/pt-BR?args=teste <br>
-- para Espanhol http://localhost:8080/api/messages/args/es-ES?args=teste <br>
-
-![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsUS.PNG).
-![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsBR.PNG).
-![](https://github.com/Natanfags/demo/blob/master/images/postmanArgsES.PNG).
+![- para Inglês http://localhost:8080/api/messages/args/en-US?args=teste](https://github.com/Natanfags/demo/blob/master/images/postmanArgsUS.PNG).
+![- para Português http://localhost:8080/api/messages/args/pt-BR?args=teste](https://github.com/Natanfags/demo/blob/master/images/postmanArgsBR.PNG).
+![- para Espanhol http://localhost:8080/api/messages/args/es-ES?args=teste](https://github.com/Natanfags/demo/blob/master/images/postmanArgsES.PNG).
 
 ### Testando a internacionalização de mensagens do sistema:
 
@@ -73,8 +65,8 @@ _1_. Criar um projeto [Spring Boot](https://start.spring.io/) e adicionar as dep
   <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
-_2_. Implementar a _classe_ _`CustomMessageSourceConfiguration`_ e configuas dois _`@Bean`_, um para tratar as mensagens(_MessageSource_) e outro para validação da _classe_ _`Person`_ que ser implementado na etapa _4_:<br>
-- O _`MessageSource`_ cdelegará as mensagens, configurando um _`classpath:"endereço do Resource Bundle"`_ e configurando também o tipo de _encoding_ que será utilizado.
+_2_. Implementar a _classe_ _`CustomMessageSourceConfiguration`_ e configurar dois _`@Bean`_, um para tratar as mensagens(_MessageSource_) e outro para validação da _classe_ _`Person`_ que ser implementado na etapa _4_:<br>
+- O _`MessageSource`_ delegará as mensagens, configurando um _`classpath:"endereço do Resource Bundle"`_ e configurando também o tipo de _encoding_ que será utilizado.
 
 ```java
  @Bean
@@ -85,7 +77,7 @@ _2_. Implementar a _classe_ _`CustomMessageSourceConfiguration`_ e configuas doi
         return messageSource;
     }
 ```  
-- O _`LocalValidatorFactoryBean`_ validará as os campos na _classe_ _`Person`_ retornando mensagem de _`@NotNull`_ e _`@NotEmpty`_ sera tatado pelo _`MessageSource`_ e retornará o _valor_ correspondente a configuração do nosso _"dicionario"_.
+- O _`LocalValidatorFactoryBean`_ validará as os campos na _classe_ _`Person`_ retornando mensagem de _`@NotNull`_ e _`@NotEmpty`_ será tratado pelo _`MessageSource`_ e retornará o _valor_ correspondente a configuração do nosso _"dicionário"_.
 ```java
  @Bean
     public LocalValidatorFactoryBean getValidator() {
@@ -94,7 +86,6 @@ _2_. Implementar a _classe_ _`CustomMessageSourceConfiguration`_ e configuas doi
         return bean;
     }
 ```
-
 
 _3_. Configurar um _`Resource Bundle`_ com nome _`messages`_ seguindo por _`"abreviação do idioma"`_ podendo criar quantos _"dicionários"_ forem necessários para variados idiomas. Exemplo:<br> 
 
